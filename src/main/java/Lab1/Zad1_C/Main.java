@@ -1,8 +1,5 @@
 package Lab1.Zad1_C;
 
-import Lab1.Zad1_B.Shape;
-import Lab1.Zad1_B.ShapeFactory;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Abstract Factory - Marcin Dyla\n");
