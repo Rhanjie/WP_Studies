@@ -7,17 +7,25 @@ public class EncryptionDecorator extends DataSourceDecorator {
 
     @Override
     public void writeData(String data) {
-        //Zaszyfruj dane
+        //Zaszyfruj dane (przykladowy kod)
+        StringBuilder compressedData = new StringBuilder();
+        for (char letter : data.toCharArray()) {
+            compressedData.append((char)(letter + 2));
+        }
 
-        super.writeData(data);
+        super.writeData(compressedData.toString());
     }
 
     @Override
     public String readData() {
         String data = super.readData();
 
-        //Odszyfruj dane
+        //Zdekompresuj dane (przykladowy kod)
+        StringBuilder decompressedData = new StringBuilder();
+        for (char letter : data.toCharArray()) {
+            decompressedData.append((char)(letter - 2));
+        }
 
-        return data;
+        return decompressedData.toString();
     }
 }

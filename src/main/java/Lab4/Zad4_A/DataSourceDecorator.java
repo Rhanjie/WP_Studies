@@ -16,4 +16,9 @@ public class DataSourceDecorator implements DataSource {
     public String readData() {
         return wrapper.readData();
     }
+
+    @Override
+    public String debugReadData() {
+        return wrapper.debugReadData();
+    }
 }
