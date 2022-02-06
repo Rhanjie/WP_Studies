@@ -55,7 +55,7 @@ public class CachedYoutubeClass implements ThirdPartyYoutubeLib {
             System.out.println("Pobrano film!");
         }
 
-        else System.out.println("Pobrany film byl w pamieci cache!");
+        else System.out.println("Film byl w pamieci cache!");
 
         return videoCache;
     }
